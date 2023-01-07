@@ -49,7 +49,7 @@ function enviarPedido() {
   const precoSobremesaNumber = valores(precoSobremesa);
   const valorTotal = precoPratoNumber + precoBebidaNumber + precoSobremesaNumber;
 
-  const mensagem = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \n Total: R$ ${valorTotal.toFixed(2)}`
+  const mensagem = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${valorTotal.toFixed(2)}`
 
   const whatsapp = "https://wa.me/5524999523474?text=" + encodeURI(mensagem);
   window.open(whatsapp);
