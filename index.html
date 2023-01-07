@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <title>Driven Eats</title>
   </head>
   <body>
@@ -16,99 +24,108 @@
     </header>
 
     <main>
-      <section class="secao1">
+      <section id="pratos-principais" class="secao1">
         <h2>Primeiro, seu prato</h2>
 
         <ul>
-          <li>
+          <li onclick="getPrato(this)" data-test="dish" class="box">
             <img
               src="./assets/img/frango_yin_yang.png"
               alt="Imagem prato principal"
             />
-            <h4>Frango Yin Yang</h4>
+            <h4 data-test="item-name">Frango Yin Yang</h4>
             <p class="descricao">Um pouco de batata, um pouco de salada</p>
-            <p class="valor">R$ 14,90</p>
+            <p data-test="item-price" class="valor">R$ 14,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
-          <li>
+          <li onclick="getPrato(this)" data-test="dish" class="box">
             <img
               src="./assets/img/frango_yin_yang.png"
               alt="Imagem prato principal"
             />
-            <h4>Carne Yin Yang</h4>
+            <h4 data-test="item-name">Carne Yin Yang</h4>
             <p class="descricao">Um pouco de batata, um pouco de salada</p>
-            <p class="valor">R$ 18,90</p>
+            <p data-test="item-price" class="valor">R$ 18,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
-          <li>
+          <li onclick="getPrato(this)" data-test="dish" class="box">
             <img
               src="./assets/img/frango_yin_yang.png"
               alt="Imagem prato principal"
             />
-            <h4>Peixe Yin Yang</h4>
+            <h4 data-test="item-name">Peixe Yin Yang</h4>
             <p class="descricao">Um pouco de batata, um pouco de salada</p>
-            <p class="valor">R$ 20,90</p>
+            <p data-test="item-price" class="valor">R$ 20,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
         </ul>
       </section>
-      <section>
+      <section id="bebidas">
         <h2>Agora, sua bebida</h2>
 
         <ul>
-          <li>
+          <li onclick="getBebida(this)" data-test="drink" class="box">
             <img
               src="./assets/img/coca-cola.png"
               alt="Imagem do refrigerante"
             />
-            <h4>Coca-cola</h4>
+            <h4 data-test="item-name">Coca-cola</h4>
             <p class="descricao">Lata coca-cola normal de 350ml</p>
-            <p class="valor">R$ 4,90</p>
+            <p data-test="item-price" class="valor">R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
-          <li>
+          <li onclick="getBebida(this)" data-test="drink" class="box">
             <img
               src="./assets/img/coca-cola.png"
               alt="Imagem do refrigerante"
             />
-            <h4>Coca-cola zero</h4>
+            <h4 data-test="item-name">Coca-cola zero</h4>
             <p class="descricao">Lata coca-cola zero de 350ml</p>
-            <p class="valor">R$ 4,90</p>
+            <p data-test="item-price" class="valor">R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
-          <li>
+          <li onclick="getBebida(this)" data-test="drink" class="box">
             <img
               src="./assets/img/coca-cola.png"
               alt="Imagem do refrigerante"
             />
-            <h4>Guaraná</h4>
+            <h4 data-test="item-name">Guaraná</h4>
             <p class="descricao">Lata guaraná normal de 350ml</p>
-            <p class="valor">R$ 4,90</p>
+            <p data-test="item-price" class="valor">R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
         </ul>
       </section>
-      <section class="secao3">
+      <section id="sobremesas" class="secao3">
         <h2>Por fim, sua sobremesa</h2>
 
         <ul>
-          <li>
+          <li onclick="getSobremesa(this)" data-test="dessert" class="box">
             <img src="./assets/img/pudim.png" alt="Imagem da sobremesa" />
-            <h4>Pudim</h4>
+            <h4 data-test="item-name">Pudim</h4>
             <p class="descricao">Apenas pudim com calda de caramelo</p>
-            <p class="valor">R$ 7,90</p>
+            <p data-test="item-price" class="valor">R$ 7,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
-          <li>
+          <li onclick="getSobremesa(this)" data-test="dessert" class="box">
             <img src="./assets/img/pudim.png" alt="Imagem da sobremesa" />
-            <h4>Mousse</h4>
+            <h4 data-test="item-name">Mousse</h4>
             <p class="descricao">Apenas de chocolate com chantilly</p>
-            <p class="valor">R$ 10,90</p>
+            <p data-test="item-price" class="valor">R$ 10,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
-          <li>
+          <li onclick="getSobremesa(this)" data-test="dessert" class="box">
             <img src="./assets/img/pudim.png" alt="Imagem da sobremesa" />
-            <h4>Torta de limão</h4>
+            <h4 data-test="item-name">Torta de limão</h4>
             <p class="descricao">Apenas fatia de torta de limão</p>
-            <p class="valor">R$ 11,90</p>
+            <p data-test="item-price" class="valor">R$ 11,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </li>
         </ul>
       </section>
     </main>
     <footer>
-      <button>
+      <button data-test="order-btn">
         <p class="p-button">Selecione os 3 itens para fechar o pedido</p>
       </button>
     </footer>

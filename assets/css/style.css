@@ -19,6 +19,7 @@ header {
   top: 0;
   left: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 99;
 }
 
 h1 {
@@ -66,7 +67,11 @@ ul {
   overflow-x: scroll;
 }
 
-li {
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+.box {
   width: 172px;
   height: 216px;
   background: #ffffff;
@@ -74,6 +79,7 @@ li {
   border-radius: 9px;
   padding-left: 14px;
   padding-right: 14px;
+  position: relative;
 }
 
 img {
@@ -104,13 +110,26 @@ h4 {
   color: #000000;
 }
 
+.green-border {
+  box-shadow: 0px 0px 10px -4px rgb(0 0 0 / 25%), inset 0px 0px 0px 5px #32b72f;
+}
+
+ion-icon {
+  position: absolute;
+  bottom: 14px;
+  right: 11px;
+  color: #32b72f;
+  font-size: 19px;
+  display: none;
+}
+
 footer {
   width: 414px;
   height: 92px;
   background-color: #ffffff;
   position: fixed;
   bottom: 0;
-  z-index: 1;
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,4 +154,8 @@ button {
   text-align: center;
   letter-spacing: 0.018em;
   color: #ffffff;
+}
+
+.green-border ion-icon {
+  display: initial;
 }
