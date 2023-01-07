@@ -4,6 +4,7 @@ function getPrato(prato) {
     selecionado.classList.remove('green-border')
   }
   prato.classList.add('green-border')
+  activeButton()
 }
 
 function getBebida(bebida) {
@@ -12,6 +13,7 @@ function getBebida(bebida) {
     selecionado.classList.remove('green-border')
   }
   bebida.classList.add('green-border')
+  activeButton()
 }
 
 function getSobremesa(sobremesa) {
@@ -20,4 +22,15 @@ function getSobremesa(sobremesa) {
     selecionado.classList.remove('green-border')
   }
   sobremesa.classList.add('green-border')
+  activeButton()
+}
+
+  function activeButton(){
+    let quantidade = document.getElementsByClassName("green-border").length
+    if(quantidade === 3){
+        document.querySelector("button").classList.add("botao-enviar")
+        document.querySelector("button p").classList.add("fechar-pedido")
+        document.querySelector("button p").innerHTML = "Fechar pedido"
+        document.querySelector("button").removeAttribute("disabled")
+    }
 }
