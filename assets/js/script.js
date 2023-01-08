@@ -40,9 +40,9 @@ function enviarPedido() {
   const bebida = document.querySelector("#bebidas .green-border h4").innerHTML;
   const sobremesa = document.querySelector("#sobremesas .green-border h4").innerHTML;
 
-  const precoPrato = document.querySelector("#pratos-principais .green-border .preco").innerHTML;
-  const precoBebida = document.querySelector("#bebidas .green-border .preco").innerHTML;
-  const precoSobremesa = document.querySelector("#sobremesas .green-border .preco" ).innerHTML;
+  const precoPrato = document.querySelector("#pratos-principais .green-border .valor").innerHTML;
+  const precoBebida = document.querySelector("#bebidas .green-border .valor").innerHTML;
+  const precoSobremesa = document.querySelector("#sobremesas .green-border .valor").innerHTML;
 
   const precoPratoNumber = valores(precoPrato);
   const precoBebidaNumber = valores(precoBebida);
